@@ -1,0 +1,43 @@
+@use "../../abstracts/variables";
+
+.component_clickdummyTopBar {
+  background: var(--color-dark-gray);
+  color: var(--color-light-gray);
+
+  > .component-container {
+
+    > .component-container-wrapper {
+
+      #navClickdummy {
+        color: var(--color-secondary);
+
+        li {
+          display: inline-block;
+
+          &:before {
+            content: none;
+          }
+
+          ~ li {
+            margin-left: 30px;
+          }
+
+          a {
+            color: var(--color-secondary);
+          }
+        }
+      }
+
+
+      #debugContainer {
+        * {
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

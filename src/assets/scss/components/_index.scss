@@ -1,0 +1,20 @@
+@use "clickdummy/comp_clickdummyTopBar";
+//@use "forms";
+@use "modules";
+
+.component {
+
+  /* ------------------------------
+      # Component Container
+      Eigentlicher Container der Komponente
+     ------------------------------ */
+  > .component-container {
+
+    /* ------------------------------
+        # Component Container Wrapper
+        Zusaetzlicher Container fuer die farblich hinterlegten Componenten
+       ------------------------------ */
+    > .component-container-wrapper {
+    }
+  }
+}
