@@ -1,0 +1,182 @@
+{
+  "project": {
+    "name": "man-e-faces",
+    "version": "0.1.0"
+  },
+
+  "development": {
+    "server": {
+      "port": 8000
+    }
+  },
+
+  "paths": {
+    "src": {
+      "path": "src",
+      "assets": [
+        "src/assets/**",
+        "!src/assets/img{,/**}",
+        "!src/assets/js{,/**}",
+        "!src/assets/scss{,/**}"
+      ],
+      "images": {
+        "path": "src/assets/img",
+        "scaled": "src/assets/img/scaled",
+        "sprites": "src/assets/img/sprites"
+      },
+      "javascript": [
+      ],
+      "sass": [
+        "src/assets/scss/app.scss"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "assets": "assets",
+      "css": "dist/assets/css",
+      "images": "dist/assets/img",
+      "scaled": "dist/assets/img/scaled",
+      "sprites": "dist/assets/img/sprites",
+      "javascript": "dist/assets/js"
+    },
+    "build": {
+      "path": "build"
+    },
+    "frameworks": {
+    }
+  },
+
+  "nsg": {
+    "sprite_src": "src/assets/img-src/sprites",
+    "sprite_target": "src/assets/img/sprites",
+    "sprite_prefix": "nsg-",
+    "sprite_suffix": "",
+    "sprite_extension": ".png",
+    "stylesheet_target": "src/assets/scss/sprites/nsg",
+    "stylesheet_prefix": "_nsg-",
+    "stylesheet_suffix": "",
+    "stylesheet_extension": ".scss"
+  },
+
+  "svgsprite": {
+    "src": [
+      "src/assets/img-src/svg-sprites/**/*.svg",
+      "!src/assets/img-src/svg-sprites/hjb/**/*.svg",
+      "!src/assets/img-src/svg-sprites/*.ignore/**"
+    ],
+    "target": "build",
+
+    "config": {
+      "log": "debug",
+
+      "shape": {
+        "id": {
+          "separator": "--",
+          "generator": "%s",
+          "pseudo": "~",
+          "whitespace": "_"
+        },
+        "dimension": {
+          "maxWidth": 2000,
+          "maxHeight": 2000,
+          "precision": 2,
+          "attributes": false
+        },
+        "spacing": {
+          "padding": 1,
+          "box": "content"
+        },
+        "transform": ["svgo"],
+        "meta": null,
+        "align": null
+      },
+
+      "svg": {
+        "xmlDeclaration": true,
+        "doctypeDeclaration": true,
+        "namespaceIDs": true,
+        "namespaceClassnames": true,
+        "dimensionAttributes": true,
+        "rootAttributes": "",
+        "precision": -1,
+        "transform": []
+      },
+
+      "mode": {
+        "view": {
+          "dest": "./assets/scss",
+          "sprite": "../../assets/img/svg-sprites/svg-sprite.view.svg",
+          "dimensions": "-dims",
+          "layout": "diagonal",
+          "common": "",
+          "mixin": "sprite",
+          "bust": false,
+          "render": {
+            "scss": {
+              "dest": "svg-sprites/_svg-sprite.view.scss"
+            }
+          },
+          "example": false
+        }
+      },
+
+      "variables": {
+        "mapname": "icons"
+      }
+    }
+  },
+
+  "resizer": {
+    "path": "src/assets/img-src/scaled/",
+    "src": "src/assets/img-src/scaled/**/{*.bmp,*.jpg,*.jpeg,*.png}",
+    "target": "src/assets/img/scaled",
+    "prefix": "scaled-",
+    "suffix": "",
+    "options": {
+      "createFolders": true
+    },
+    "sizes": {
+      "XS": {
+        "width": 150,
+        "height": 150
+      },
+      "S": {
+        "width": 250,
+        "height": 250
+      },
+      "M": {
+        "width": 350,
+        "height": 350
+      },
+      "L": {
+        "width": 450,
+        "height": 450
+      },
+      "XL": {
+        "width": 550,
+        "height": 550
+      },
+      "XXL": {
+        "width": 650,
+        "height": 650
+      },
+      "teaser": {
+        "_height": -1,
+        "width": 500
+      },
+      "standard": {
+        "_height": -1,
+        "width": 500
+      },
+      "poster": {
+        "height": 900,
+        "_width": -1
+      },
+      "banner": {
+        "height": 1000,
+        "_width": -1
+      }
+    }
+  }
+
+}
