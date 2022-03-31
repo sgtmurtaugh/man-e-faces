@@ -8,7 +8,7 @@
         $.manefaces = {};
     }
 
-    $.manefaces.comp_XY = function(el, options) {
+    $.manefaces.block_XY = function(el, options) {
         let base = this;
 
         // Access to jQuery and DOM versions of element
@@ -16,9 +16,9 @@
         base.el = el;
 
         // Add a reverse reference to the DOM object
-        base.$el.data("manefaces.comp_XY", base);
+        base.$el.data("manefaces.block_XY", base);
         base.init = function() {
-            base.options = $.extend({}, $.manefaces.comp_XY.defaultOptions, options);
+            base.options = $.extend({}, $.manefaces.block_XY.defaultOptions, options);
 
             // todo implement functionality here ...
         };
@@ -27,14 +27,14 @@
     };
 
     // optional default options
-    $.manefaces.comp_XY.defaultOptions = {};
+    $.manefaces.block_XY.defaultOptions = {};
 
-    $.fn.manefaces_comp_XY = function(options) {
+    $.fn.manefaces_block_XY = function(options) {
         return this.each(function() {(
-            new $.manefaces.comp_XY(this, options));
+            new $.manefaces.block_XY(this, options));
         });
     };
 })(jQuery);
 
-$(".recommendation-list").manefaces_comp_XY();
+$(".recommendation-list").manefaces_block_XY();
 

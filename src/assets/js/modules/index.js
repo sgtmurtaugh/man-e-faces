@@ -1,1 +1,1 @@
-require('./comp_XY');
+require('./mod_XY');
