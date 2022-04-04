@@ -1,0 +1,16 @@
+{
+    "plugins": {
+        "posthtml-include": {
+            "root": "./src/html"
+        },
+
+        "posthtml-expressions": {
+            "locals": {
+                "process": {
+                    "env": "process.env"
+                }
+            }
+        },
+
+    }
+}

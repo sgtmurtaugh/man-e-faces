@@ -13,6 +13,7 @@
   "paths": {
     "src": {
       "path": "src",
+      "html": "/src/html/**",
       "assets": [
         "src/assets/**",
         "!src/assets/img{,/**}",
@@ -35,6 +36,7 @@
       "assets": "assets",
       "css": "dist/assets/css",
       "images": "dist/assets/img",
+      "html": "dist/html",
       "scaled": "dist/assets/img/scaled",
       "sprites": "dist/assets/img/sprites",
       "javascript": "dist/assets/js"

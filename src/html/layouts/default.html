@@ -5,17 +5,15 @@
 <html lang="de"><!--<![endif]-->
 <head>
     <title>
-                                {{#if title}}
-        {{title}}
-                                {{else}}
-        {{page}}
-                                {{/if}}
+        {{typeof title != 'undefined' ? title : page}}
     </title>
 
-    {{> meta-head--default }}
-    {{> script-head--default }}
-    {{> style-head--default }}
+<!--    <include src="partials/meta/default.html" />-->
+<!--    <include src="partials/script/head/default.html" />-->
+<!--    <include src="partials/style/style/default.html" />-->
 </head>
 
-{{> struc-body--default }}
+<body>
+<!--    <include src="partials/structure/body/simple.html" />-->
+</body>
 </html>

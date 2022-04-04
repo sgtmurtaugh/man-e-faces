@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-panini": "gulp default",
-    "dev-parcel": "parcel watch 'build/**/*'",
+    "dev-parcel": "parcel 'build/**/*'",
+    "dev-parcel2": "parcel 'src/html/pages/**/*'",
     "dev": "npm run build-panini && npm run dev-parcel",
     "build-parcel": "parcel build 'build/**/*'",
     "build": "npm run build-panini && npm run build-parcel",
@@ -24,11 +25,37 @@
     "@parcel/source-map": "^2.0.2",
     "@parcel/transformer-postcss": "^2.4.0",
     "@sgtmurtaugh/typechecks": "^0.9.0",
+    "autoprefixer": "^10.4.4",
+    "cssnano": "^5.1.5",
     "gulp": "^4.0.2",
     "gulp-load-plugins": "^2.0.7",
     "lodash": "^4.17.21",
+    "node-sass": "^7.0.1",
     "panini": "^1.7.2",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.49.10"
+    "postcss": "^8.4.12",
+    "posthtml-aria-tabs": "^1.0.0",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-bem": "^0.2.2",
+    "posthtml-each": "^1.0.1",
+    "posthtml-expressions": "^1.9.0",
+    "posthtml-extend": "^0.6.2",
+    "posthtml-include": "^1.7.2",
+    "posthtml-lazyload": "^1.0.10",
+    "posthtml-load-config": "^2.0.0",
+    "posthtml-load-plugins": "^0.11.8",
+    "posthtml-lorem": "^1.0.0",
+    "posthtml-markdownit": "^1.3.0",
+    "posthtml-mixins": "^1.0.1",
+    "posthtml-modules": "^0.8.1",
+    "posthtml-schemas": "^1.0.0",
+    "posthtml-tidy": "^0.8.0",
+    "sass": "^1.49.10",
+    "post-sequence": "^0.3.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": true
+    }
   }
 }

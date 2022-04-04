@@ -1,0 +1,22 @@
+<body class="noJS">
+    <!-- ACHTUNG:
+        Inkludierung der ClickdummyTopBar ist fuer den GSB NICHT notwendig!
+    -->
+<!--    <include src="partials/clickdummy/topBar.html" />-->
+
+    <div id="header">
+<!--        <include src="partials/comp_navmeta.html" />-->
+<!--        <include src="partials/comp_header.html" />-->
+    </div>
+
+    <div id="main" class='<if condition='isRootPage'>isRootPage</if>">
+        {{body}}
+    </div>
+
+    <div id="footer">
+<!--        <include src="partials/comp_footer.html" />-->
+    </div>
+
+    <!-- additional Scripts -->
+    <include src="partials/script/body/default.html" />
+</body>
